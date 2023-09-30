@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example Motion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .full {
+          height: 100vh;
+          width: 100vw;
+        }
+        .overX {
+          overflow-x: hidden;
+        }
+
+        .leaf {
+          border-top-right-radius: 65px;
+          border-bottom-left-radius: 65px;
+        }
+
+        .flexing {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .h_nav {
+          height: 20%;
+          width: 100%;
+        }
+
+        .s_body {
+          height: 80%;
+          width: 100%;
+        }
+
+        .h_f {
+          height: 200px;
+          width: 200px;
+        }
+
+        .max_s {
+          max-width: 1000px;
+        }
+
+        .scroll_fit {
+          overflow: none;
+        }
+        .progress_bar {
+          position: fixed;
+          z-index: 999;
+          height: 10px;
+          top: 0;
+          left: 0;
+          right: 0;
+          background-color: green;
+          transform-origin: 0%;
+        }
+      }
+    </style>
+  </head>
+  <body class="full overX">
+    <div id="root" class="full"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
